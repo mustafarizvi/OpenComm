@@ -1,2 +1,2 @@
 Welcome to Git
-Hello!! What's up, yo
+Let's all use GitHub!! :D
