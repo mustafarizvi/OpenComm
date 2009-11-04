@@ -29,7 +29,9 @@ public class activity extends Activity {
         catch(Exception e) {}
         Collection <User> values = list.values();
         Iterator <User>itr = values.iterator();
-        tv.setText((String)(itr.next()).getData("school"));
+        while(itr.hasNext()) {
+        	tv.setText((String)(itr.next()).getData("school"));
+        }
         setContentView(tv);
 
     }

@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<title>Coding Guidelines</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<body>
+<h1>User Interface Code Specifications<h1>
+<h2>Short Term Goal</h2>
+<p>To write out a user interface for a SIPDroid or XMPP stack on the Android 2.0 platform.</p>
+<h2>Long Term Goal</h2>
+<p>Develop a modular architecture for an user interface for a chat system that could be cross-platform that will be developed by multiple users</p>
+<h3>Implications of Long Term</h3>
+<ul>
+<li>Cross-Platform means to avoid all environment specific settings or code. Minimize system and OS dependencies, or isolate them in their own modules to prevent the need for re-development</li>
+<li>Cross-Platform also means cross-GUI toolkit. Make sure that the views for objects are also isolated from the controls and models, so that the algorithms may remain, with swappable views for each environment.</li>
+<li>Standards based coding so that multiple users can understand the code. Java syntax is preferred.</li>
+<li>Documentation must be kept up to date. No exceptions after a push.</li>
+<li>We will be using the MVC (Model-View-Controller) method for the reasons listed</li>
+<li>Support for generics is in Java 1.5+, and should be used to prevent casting errors in the future</li>
+<li>Hacks are useful to get things working. But comment them so that people are aware that its a hack.</li>
+</ul>
+<h2>Coding Standards</h2>
+<ul>
+<li>Java convention means that classes are capitalized</li>
+<li>Convention has variables starting with lower-case</li>
+<li>Javadoc is tedious but standard</li>
+<li>Constants may be capitalized or all-caps, but remain consistent in classes</li>
+<li>Packages should start with org.opencomm</li>
+</ul>
+</body>
+</html>

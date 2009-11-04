@@ -35,7 +35,7 @@ public class UserList extends HashMap<String, User> {
 	}
 	public UserList(Collection<String> userNames, Collection<User> users) throws Exception {
 		Iterator<String> n_itr = userNames.iterator();
-		Iterator u_itr = users.iterator();
+		Iterator <User>u_itr = users.iterator();
 		try {
 			while(n_itr.hasNext()) {
 				String name = n_itr.next();
