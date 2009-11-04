@@ -13,7 +13,7 @@ import java.lang.IllegalArgumentException;
  * @author mbentz
  *	userList is the base class for handling all lists of users
  */
-public class UserList extends HashMap<String, Object> {
+public class UserList extends HashMap<String, User> {
 
 	/**
 	 * Needed for HashMap extension
@@ -27,7 +27,7 @@ public class UserList extends HashMap<String, Object> {
 	}
 
 	/**
-	 * @param map
+	 * @param map 
 	 */
 	public UserList(Map map) {
 		super(map);
@@ -39,7 +39,7 @@ public class UserList extends HashMap<String, Object> {
 		try {
 			while(n_itr.hasNext()) {
 				String name = n_itr.next();
-				Object user = u_itr.next();
+				User user = u_itr.next();
 				this.put(name, user);
 			}
 		}
@@ -52,12 +52,13 @@ public class UserList extends HashMap<String, Object> {
 	 * @param u the value
 	 * @throws DuplicateElementException If the key or value already exsists
 	 */
-	public void put(String userName, User u) throws DuplicateElementException{
+	public User putElement(String userName, User u) throws DuplicateElementException{
 		if(this.hasNoDuplicates(userName, u)) {
 			super.put(userName, u);
 		}
 		else
 			throw new DuplicateElementException();
+		return u;
 	}
 	public boolean hasNoDuplicates(String userName, User u) {
 		return !(this.containsKey(userName)&&this.containsValue(u));
