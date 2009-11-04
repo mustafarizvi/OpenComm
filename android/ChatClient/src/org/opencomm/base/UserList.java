@@ -57,7 +57,7 @@ public class UserList extends HashMap<String, Object> {
 			super.put(userName, u);
 		}
 		else
-			throw new DuplicateEntryException();
+			throw new DuplicateElementException();
 	}
 	public boolean hasNoDuplicates(String userName, User u) {
 		return !(this.containsKey(userName)&&this.containsValue(u));
